@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>IZP browser</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.png</normaloff>icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(65, 65, 65);</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="spacing">
+     <number>1</number>
+    </property>
+    <property name="leftMargin">
+     <number>1</number>
+    </property>
+    <property name="topMargin">
+     <number>1</number>
+    </property>
+    <property name="rightMargin">
+     <number>1</number>
+    </property>
+    <property name="bottomMargin">
+     <number>1</number>
+    </property>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="styleSheet">
+       <string notr="true">QTabBar::tab{
+	background-color:rgb(129, 129, 129);
+	border: 2px solid rgb(255, 255, 255);
+	border-radius: 10px;
+	margin-bottom: -10px;
+	border-color: rgb(255, 255, 255);
+	font: 12pt &quot;Bahnschrift&quot;;
+	padding: 12px;
+	min-width: 70px;
+}
+QTabBar::tab:hover{
+	border: 2px solid rgb(107, 248, 255);
+}
+QTabBar::tab:focus{
+	background-color: rgb(159, 159, 159);
+	border: 2px solid rgb(0, 170, 255);
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Tab 1</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout" stretch="1,8">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="search_bar">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="page_back_button">
+            <property name="minimumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	background-color: rgb(129, 129, 129);
+	border: 3px solid rgb(255, 255, 255);
+	border-radius: 20px;
+	border-color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+	border: 3px solid rgb(0, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(140, 140, 140);
+	border: 3px solid rgb(0, 170, 255);
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="page_forward_button">
+            <property name="minimumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	background-color: rgb(129, 129, 129);
+	border: 3px solid rgb(255, 255, 255);
+	border-radius: 20px;
+	border-color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+	border: 3px solid rgb(0, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(140, 140, 140);
+	border: 3px solid rgb(0, 170, 255);
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="page_reload_button">
+            <property name="minimumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	background-color: rgb(129, 129, 129);
+	border: 3px solid rgb(255, 255, 255);
+	border-radius: 20px;
+	border-color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+	border: 3px solid rgb(0, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(140, 140, 140);
+	border: 3px solid rgb(0, 170, 255);
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="search_field">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit{
+	background-color:rgb(129, 129, 129);
+	border: 3px solid rgb(255, 255, 255);
+	border-radius: 20px;
+	border-color: rgb(255, 255, 255);
+	padding-left: 10px;
+	padding-right: 10px;
+	font: 14pt &quot;Bahnschrift&quot;;
+}
+QLineEdit:hover{
+	border: 3px solid rgb(107, 248, 255);
+}
+QLineEdit:focus{
+	background-color: rgb(159, 159, 159);
+	border: 3px solid rgb(0, 170, 255);
+}</string>
+            </property>
+            <property name="placeholderText">
+             <string>Search here...</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="settings_button">
+            <property name="minimumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	background-color: rgb(129, 129, 129);
+	border: 3px solid rgb(255, 255, 255);
+	border-radius: 20px;
+	border-color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+	border: 3px solid rgb(0, 255, 255);
+}
+QPushButton:focus{
+	background-color: rgb(140, 140, 140);
+	border: 3px solid rgb(0, 170, 255);
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="web_engine_box">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Tab 2</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>page_back_button</tabstop>
+  <tabstop>page_forward_button</tabstop>
+  <tabstop>page_reload_button</tabstop>
+  <tabstop>settings_button</tabstop>
+  <tabstop>search_field</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
