@@ -7,6 +7,10 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWebEngineWidgets import *
 
 
+##########################################
+#         GUI DEFINITION
+##########################################
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -176,9 +180,51 @@ class Ui_MainWindow(object):
         # web engine
         self.web_engine = QWebEngineView()
         self.web_engine.setObjectName('web_engine')
-        self.web_engine.setUrl(QtCore.QUrl("http://google.com"))
+        self.web_engine.setUrl(QtCore.QUrl("https://start.duckduckgo.com/"))
         self.web_engine_box.addWidget(self.web_engine)
 
+
+##########################################
+#         GUI DRIVERS
+##########################################
+
+        self.search_field.returnPressed.connect(self.change_site)
+        self.page_back_button.clicked.connect(self.page_back)
+        self.page_forward_button.clicked.connect(self.page_forward)
+        self.page_reload_button.clicked.connect(self.page_reload)
+        self.settings_button.clicked.connect(self.settings)
+        self.web_engine.urlChanged.connect(self.change_url)
+
+
+    def change_site(self):
+        search_text = str(self.search_field.text())
+        if 'http://' in search_text or 'https://' in search_text:
+            url = QtCore.QUrl(search_text)
+        else:
+            url = QtCore.QUrl('https://duckduckgo.com/?q={}&atb=v312-5__&ia=web'.format(search_text))
+        url.setScheme('http')
+        self.web_engine.setUrl(url)
+
+    def page_back(self):
+        self.web_engine.back()
+
+    def page_forward(self):
+        self.web_engine.forward()
+
+    def page_reload(self):
+        self.web_engine.reload()
+
+    def settings(self):
+        print('settings')
+
+    def change_url(self):
+        new_url = self.web_engine.url()
+        self.search_field.setText(new_url.toString())
+
+
+##########################################
+#         MAIN FUNCTION
+##########################################
 
 if __name__ == "__main__":
     import sys
